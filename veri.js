@@ -2,7 +2,7 @@
 if(localStorage.getItem('Token') == null){
   $('.sansur').css('display','none')
 }else{
-    baslat(localStorage.getItem('Token'));
+    baslat(localStorage.getItem('Token'),localStorage.getItem('Nick'));
 }
 
 
@@ -19,7 +19,7 @@ $('.12').css('width',width);
 tokenal()
 }else{
   console.log("zaten kayıtlı ana sayfaya yönlendiliriyor");
-    baslat(localStorage.getItem('Token'));
+    baslat(localStorage.getItem('Token'),localStorage.getItem('Nick'));
 }
 
 }
@@ -34,7 +34,8 @@ function tokenal() {
               success: function (result) {
                 console.log(result);
                 localStorage.setItem('Token', result.access_token);
-                baslat(result.access_token);
+                localStorage.setItem('Nick', result.nick);
+                baslat(result.access_token,result.nick);
               },
               error: function (error) {
                   console.log("hata");
@@ -50,10 +51,10 @@ function tokenal() {
 
 
 
-function baslat(token) {
+function baslat(token,nick) {
 
   $.ajax({
-              url: "https://api.eksisozluk.com/v1/user/dodecahedron",
+              url: "https://api.eksisozluk.com/v1/user/" + nick,
               type: 'GET',
               dataType: 'json',
               headers: {
