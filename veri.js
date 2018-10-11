@@ -150,7 +150,7 @@ function yuzde(kucukveri) {
 }
 
 function kucukrender(veri,tarihler,veriler) {
-  $('.my-3:eq(0)').html(sonuc.UserInfo.StandingQueueNumber)
+  $('.siralama').html(sonuc.UserInfo.StandingQueueNumber)
   tersveri = veri.reverse();
 console.log(veri.length)
   if(veri.length < 6){
