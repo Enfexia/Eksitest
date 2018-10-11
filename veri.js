@@ -26,7 +26,7 @@ tokenal()
 
 function tokenal() {
   $.ajax({
-              url: "http://cors-anywhere.herokuapp.com/https://api.eksisozluk.com/token",
+              url: "https://cors-anywhere.herokuapp.com/https://api.eksisozluk.com/token",
               type: 'POST',
               dataType: 'json',
               data:{'grant_type':'password','username':$('#form1-username').val(),'password':$('#form2-password').val(),'client_secret': '6cba2458-6fa8-4c55-8d72-78620542e43d'},
