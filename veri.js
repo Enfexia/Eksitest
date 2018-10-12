@@ -70,10 +70,22 @@ function baslat(token,nick) {
                 $('.sansur').css('display','none')
               },
               error: function (error) {
-
+                $('.sansur').css('display','none')
+                localStorage.removeItem("Token");
+                localStorage.removeItem("Nick");
               }
           });
 }
+
+function yarak() {
+  localStorage.removeItem('Buyuksira');
+  localStorage.removeItem('Token');
+  localStorage.removeItem('Nick');
+  $('.arka').hide()
+  $('.giris').show()
+  $('.sorgu').show()
+}
+
 
 
 tarih = ""
