@@ -135,15 +135,18 @@ function yuzdebul(oldNumber, newNumber){
 
 
 function yuzde(kucukveri) {
+
   $('body > div > main > div > div:nth-child(2) > div:nth-child(1) > div > div > div.d-flex.flex-column.m-auto > div:nth-child(2) > span').html(Math.round(yuzdebul(kucukveri[5],kucukveri[6]) * 100) / 100 +'%');
 
 
 
   if(Math.round(yuzdebul(kucukveri[5],kucukveri[6]) * 100) / 100 > 0){
+
     $('body > div > main > div > div:nth-child(2) > div > div > div > div.d-flex.flex-column.m-auto > div:nth-child(2) > span').addClass('stats-small__percentage--increase')
     backgroundColor= 'rgba(0, 184, 216, 0.1)'
     borderColor= 'rgb(0, 184, 216)'
   }else{
+
     $('body > div > main > div > div:nth-child(2) > div > div > div > div.d-flex.flex-column.m-auto > div:nth-child(2) > span').addClass('stats-small__percentage--decrease')
     backgroundColor = 'rgba(255,65,105,0.1)';
     borderColor =  'rgb(255,65,105)';
@@ -161,7 +164,7 @@ console.log(veri.length)
     for (var i = 0; i < 7; i++) {
       kucukveri = Math.ceil(Object.values(tersveri[i]) / 10) * 10;
       kucukveri = kucukveri.toString();
-      kucukveri = kucukveri.slice(0, 1) + "." + kucukveri.slice(1, 3);
+      kucukveri = kucukveri.slice(0, 1) + "." + kucukveri.slice(1);
       kucukveriler[i] = kucukveri
     }
 
