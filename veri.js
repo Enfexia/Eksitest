@@ -157,7 +157,7 @@ console.log(veri.length)
   if(veri.length < 6){
     siralama = [0,0,0,0,0,0,0]
   }else{
-    for (var i = 0; i < 7; i++) {
+    for (var i = 0; i < 8; i++) {
       kucukveri = Math.ceil(Object.values(tersveri[i]) / 10) * 10;
       kucukveri = kucukveri.toString();
       kucukveri = kucukveri.slice(0, 1) + "." + kucukveri.slice(1, 3);
