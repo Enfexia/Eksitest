@@ -77,13 +77,14 @@ function baslat(token,nick) {
           });
 }
 
-function yarak() {
+function verisil() {
   localStorage.removeItem('Buyuksira');
   localStorage.removeItem('Token');
   localStorage.removeItem('Nick');
   $('.arka').hide()
   $('.giris').show()
   $('.sorgu').show()
+  $('.sollsil').hide()
 }
 
 
